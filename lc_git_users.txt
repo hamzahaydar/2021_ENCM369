@@ -1,1 +1,2 @@
 Hamza,Haydar,hamzahaydar@ucalgary.ca,hamzahaydar,2021_ENCM369
+ENCM369,Geoffrey Messier,jrlong@ucalgary.ca,UofCencm369,20201_ENCM369
