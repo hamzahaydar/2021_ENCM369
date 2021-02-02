@@ -96,21 +96,20 @@ void UserAppRun(void)
 {
     u32 u32Counter = 3000000000000000;
 
-    while(LATA<0xC0)
+    while(LATA<0xC0)//loops through 0x01 too 0x3F to cycle through the different bits for port A
     {    
-     LATA++;
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
+     LATA++;//increments the 6 bits
+     for(int i=0; i<u32Counter;i++) {}//delay
+     for(int i=0; i<u32Counter;i++) {}//delay    
+     for(int i=0; i<u32Counter;i++) {}//delay
+     for(int i=0; i<u32Counter;i++) {}//delay
+     for(int i=0; i<u32Counter;i++) {}//delay
+     for(int i=0; i<u32Counter;i++) {}//delay    
+     for(int i=0; i<u32Counter;i++) {}//delay
+     for(int i=0; i<u32Counter;i++) {}//delay
     }
     
     
-    LATA=0X80;
  }
     
 
