@@ -88,10 +88,10 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x00;
-    PORTA=0x00;    
-    LATA=0x80;   
-     
+    TRISA = 0x00; // A ports are set to output
+    PORTA = 0x00; //all A ports initialized to zero     
+    LATA = 0x80; // initialize A ports to have port A7 on always     
+
 } /* end GpioSetup() */
 
 
