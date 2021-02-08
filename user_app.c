@@ -94,20 +94,22 @@ Promises:
 */
 void UserAppRun(void)
 {
-    u32 u32Counter = 3000000000000000;
+    u32 u32Counter = 3000000000000000;//used for delay
 
     while(LATA<0xC0)//loops through 0x01 too 0x3F to cycle through the different bits for port A
     {    
-     LATA++;//increments the 6 bits
-     for(int i=0; i<u32Counter;i++) {}//delay
-     for(int i=0; i<u32Counter;i++) {}//delay    
-     for(int i=0; i<u32Counter;i++) {}//delay
-     for(int i=0; i<u32Counter;i++) {}//delay
-     for(int i=0; i<u32Counter;i++) {}//delay
-     for(int i=0; i<u32Counter;i++) {}//delay    
-     for(int i=0; i<u32Counter;i++) {}//delay
-     for(int i=0; i<u32Counter;i++) {}//delay
+         LATA++;//increments the 6 bits which are the different ports
+         for(int i=0; i<u32Counter;i++) {}//delay
+         for(int i=0; i<u32Counter;i++) {}//delay    
+         for(int i=0; i<u32Counter;i++) {}//delay
+         for(int i=0; i<u32Counter;i++) {}//delay
+         for(int i=0; i<u32Counter;i++) {}//delay
+         for(int i=0; i<u32Counter;i++) {}//delay    
+         for(int i=0; i<u32Counter;i++) {}//delay
+         for(int i=0; i<u32Counter;i++) {}//delay
     }
+    
+
     
     
  }
