@@ -110,7 +110,7 @@ void UserAppRun(void)
          for(int i=0; i<u32Counter;i++) {} //delay
     }
     
-    LATA = 0x08; //resets the pins 
+    LATA = 0x80; //resets the pins 
 
     
     
