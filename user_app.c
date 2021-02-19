@@ -94,24 +94,20 @@ Promises:
 */
 void UserAppRun(void)
 {
-    u32 u32Counter = 3000000000000000;
-
-    while(LATA<0xC0)
-    {    
-     LATA++;
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-    }
+        u32 u32Counter = 3000000000000000; //used for delay
     
-    
-    LATA=0X80;
- }
+        if(0x30 == (PORTB & 0x30)&& LATA<0xC0) //checks to see if button is pressed      
+        {
+            for(int i=0; i<u32Counter;i++){} //delay
+            for(int i=0; i<u32Counter;i++){} //delay    
+            for(int i=0; i<u32Counter;i++){} //delay
+            LATA ++; //increments 6 bit counter
+        }
+        else if(LATA==0xC0) //reset A port outputs 
+        {
+            LATA=0x80;    
+        }
+}  
     
 
  /* end UserAppRun */
