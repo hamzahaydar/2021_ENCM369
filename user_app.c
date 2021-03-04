@@ -31,8 +31,8 @@ All Global variable names shall start with "G_<type>UserApp1"
 ***********************************************************************************************************************/
 /* New variables */
 volatile u8 G_u8UserAppFlags;                             /*!< @brief Global state flags */
-static u8 Counter=0x00;
-u8 au8Pattern[] = {0x01,0x02,0x04,0x08,0x10,0x20};
+static u8 Counter=0x00; // counter that sets LATA to one of the light pattern array indexes
+u8 au8Pattern[] = {0x01,0x02,0x04,0x08,0x10,0x20}; // light pattern
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Existing variables (defined in other files -- should all contain the "extern" keyword) */

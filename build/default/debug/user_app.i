@@ -27349,7 +27349,7 @@ void TimeXus(u16 User_Input);
 
 
 volatile u8 G_u8UserAppFlags;
-static u16 Counter=0x0000;
+static u8 Counter=0x00;
 u8 au8Pattern[] = {0x01,0x02,0x04,0x08,0x10,0x20};
 
 
@@ -27369,11 +27369,14 @@ void UserAppInitialize(void)
 # 99 "user_app.c"
 void UserAppRun()
 {
-# 118 "user_app.c"
-    Counter+=0x0001;
-    if(Counter == 0x01F4){
-        Counter = 0x0000;
-        LATA ^=0X01;
+    if(PIR3bits.TMR0IF==1)
+    {
+        LATA = au8Pattern[Counter];
+        Counter++;
+    }
+    if (Counter == 0x06)
+    {
+        Counter = 0x00;
     }
 }
    void TimeXus(u16 User_Input){

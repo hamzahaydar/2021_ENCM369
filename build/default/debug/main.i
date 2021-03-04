@@ -27386,9 +27386,8 @@ void main(void)
 
     TimeXus(0x03E8);
 
-    while((PIR3 &0X80)!= 0X80)
+    while(PIR3bits.TMR0IF!=1)
     {
-       PIR3bits.TMR0IF = 0x00;
     }
 
     (LATA |= 0X80);
