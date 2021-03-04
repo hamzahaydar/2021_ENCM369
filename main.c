@@ -63,7 +63,6 @@ void main(void)
     
     while((PIR3 &0X80)!= 0X80)    
     {  
-        PIR3 &= 0X00;
     }
       
     HEARTBEAT_ON();

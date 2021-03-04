@@ -27388,7 +27388,6 @@ void main(void)
 
     while((PIR3 &0X80)!= 0X80)
     {
-        PIR3 &= 0X00;
     }
 
     (LATA |= 0X80);

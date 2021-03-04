@@ -31,7 +31,8 @@ All Global variable names shall start with "G_<type>UserApp1"
 ***********************************************************************************************************************/
 /* New variables */
 volatile u8 G_u8UserAppFlags;                             /*!< @brief Global state flags */
-
+static u8 Counter=0x00;
+u8 au8Pattern[] = {0x01,0x02,0x04,0x08,0x10,0x20};
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Existing variables (defined in other files -- should all contain the "extern" keyword) */
@@ -97,7 +98,6 @@ Promises:
 */
 void UserAppRun()
 {    
-    u16 counter;
     /*
      for (u8 x = 0; x < 64; x++)
     {
@@ -106,21 +106,26 @@ void UserAppRun()
         
     }
      */
-    counter+=0x0001;
-    if(counter == 0x01F4){
-        counter = 0x0000;
-        LATA ^= 0x01;
-    }
- }
-void TimeXus(u16 User_Input){
+   if(PIR3bits.TMR0IF==1)
+          {
+             LATA = au8Pattern[Counter];
+             Counter++;
+          }
+          if (Counter == 0x06)
+          {
+            Counter = 0x00;
+          }
+}
+   void TimeXus(u16 User_Input){
     
     T0CON0 &= 0X7F; // Disable timer 
     
     u16 timer_end = 0xFFFF - User_Input; // configure timer end to user specfication
     
-    TMR0L = (u8) (timer_end & 0x0000); // Restart
-    TMR0H = (u8) ((timer_end >> 8)&0x0000);
+    TMR0L = (u8) (timer_end & 0x0000); // configure timer start to user input
+    TMR0H = (u8) ((timer_end >> 8)&0x0000); // configure timer start to user input
     
+    PIR3bits.TMR0IF = 0x00; // alarm restarted
     T0CON0 |= 0X80; // Re-enable Timer
     
 }   

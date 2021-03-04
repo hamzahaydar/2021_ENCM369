@@ -12,20 +12,22 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/debug\Pic_activity_5.X.debug.o
-cinit CODE 0 1FF38 1FF38 12 1
+cinit CODE 0 1FF52 1FF52 32 1
 idloc IDLOC 5 200000 200000 20 1
-text0 CODE 0 1FFB4 1FFB4 48 1
-text1 CODE 0 1FF72 1FF72 20 1
-text2 CODE 0 1FF5E 1FF5E 14 1
-text3 CODE 0 1FF28 1FF28 10 1
-text4 CODE 0 1FF26 1FF26 2 1
-text5 CODE 0 1FF92 1FF92 22 1
-text6 CODE 0 1FF4A 1FF4A 14 1
-text7 CODE 0 1FF24 1FF24 2 1
-cstackCOMRAM COMRAM 1 50E 50E 4 1
-bssCOMRAM COMRAM 1 501 501 D 1
+text0 CODE 0 1FFBC 1FFBC 40 1
+text1 CODE 0 1FF84 1FF84 38 1
+text2 CODE 0 1FF1C 1FF1C 14 1
+text3 CODE 0 1FEF6 1FEF6 12 1
+text4 CODE 0 1FEEE 1FEEE 2 1
+text5 CODE 0 1FF30 1FF30 22 1
+text6 CODE 0 1FF08 1FF08 14 1
+text7 CODE 0 1FEEC 1FEEC 2 1
+idataCOMRAM CODE 0 1FEF0 1FEF0 6 1
+cstackCOMRAM COMRAM 1 515 515 4 1
+dataCOMRAM COMRAM 1 50F 50F 6 1
+bssCOMRAM COMRAM 1 501 501 E 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+$C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -43,10 +45,10 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 4-1FF23 1
+CONST 4-1FEEB 1
 STACK 560-25FF 1
-SMALLCONST 2600-1FF23 1
-CODE 4-1FF23 1
+SMALLCONST 2600-1FEEB 1
+CODE 4-1FEEB 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -75,12 +77,12 @@ BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
 BANK37 2500-25FF 1
-BIGRAM 512-25FF 1
-COMRAM 512-55F 1
+BIGRAM 519-25FF 1
+COMRAM 519-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
 MEDIUMCONST 2600-FFFF 1
-MEDIUMCONST 12600-1FF23 1
+MEDIUMCONST 12600-1FEEB 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -95,65 +97,80 @@ MEDIUMCONST 12600-1FF23 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\Pic_activity_5.X.debug.o
-1FF24 text7 CODE >70:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF24 text7 CODE >74:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF4A text6 CODE >89:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF4A text6 CODE >91:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF4E text6 CODE >92:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF54 text6 CODE >93:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF58 text6 CODE >94:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF5C text6 CODE >96:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF92 text5 CODE >111:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF92 text5 CODE >113:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FFA2 text5 CODE >114:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FFB2 text5 CODE >116:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF26 text4 CODE >133:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF26 text4 CODE >136:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
-1FF28 text3 CODE >115:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF28 text3 CODE >117:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF2C text3 CODE >119:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF2C text3 CODE >121:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF30 text3 CODE >122:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF34 text3 CODE >124:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF36 text3 CODE >126:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF5E text2 CODE >76:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF5E text2 CODE >79:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF64 text2 CODE >80:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF68 text2 CODE >81:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF6C text2 CODE >82:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF70 text2 CODE >83:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF72 text1 CODE >98:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF72 text1 CODE >109:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF76 text1 CODE >110:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF8C text1 CODE >111:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF8C text1 CODE >112:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FF90 text1 CODE >114:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
-1FFB4 text0 CODE >35:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFB4 text0 CODE >37:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFB6 text0 CODE >40:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFBA text0 CODE >41:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFBE text0 CODE >42:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFC2 text0 CODE >47:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFC6 text0 CODE >56:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFCA text0 CODE >59:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFCC text0 CODE >60:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFD0 text0 CODE >62:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFDC text0 CODE >64:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFE0 text0 CODE >66:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FEEC text7 CODE >70:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FEEC text7 CODE >74:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF08 text6 CODE >89:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF08 text6 CODE >91:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF0C text6 CODE >92:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF12 text6 CODE >93:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF16 text6 CODE >94:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF1A text6 CODE >96:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF30 text5 CODE >111:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF30 text5 CODE >113:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF40 text5 CODE >114:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FF50 text5 CODE >116:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FEEE text4 CODE >133:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FEEE text4 CODE >136:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\encm369_pic18.c
+1FEF6 text3 CODE >119:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FEF6 text3 CODE >121:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FEFA text3 CODE >123:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FEFA text3 CODE >125:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FEFE text3 CODE >126:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF02 text3 CODE >128:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF04 text3 CODE >129:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF06 text3 CODE >131:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF1C text2 CODE >77:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF1C text2 CODE >80:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF22 text2 CODE >81:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF26 text2 CODE >82:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF2A text2 CODE >83:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF2E text2 CODE >84:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF84 text1 CODE >99:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF84 text1 CODE >109:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FF92 text1 CODE >111:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FFA2 text1 CODE >112:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FFA4 text1 CODE >114:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FFB6 text1 CODE >116:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FFBA text1 CODE >118:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\user_app.c
+1FFBC text0 CODE >35:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFBC text0 CODE >37:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFBE text0 CODE >40:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFC2 text0 CODE >41:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFC6 text0 CODE >42:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFCA text0 CODE >47:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFCE text0 CODE >56:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFD2 text0 CODE >59:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFD4 text0 CODE >60:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFD8 text0 CODE >62:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
 1FFE4 text0 CODE >64:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FFF2 text0 CODE >69:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
-1FF38 cinit CODE >5094:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF38 cinit CODE >5096:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF38 cinit CODE >5099:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF38 cinit CODE >5121:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF3C cinit CODE >5122:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF3E cinit CODE >5123:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF3E cinit CODE >5124:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF40 cinit CODE >5125:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF42 cinit CODE >5126:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF44 cinit CODE >5132:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF44 cinit CODE >5134:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
-1FF46 cinit CODE >5135:C:\Users\hamza\AppData\Local\Temp\s1qv4.s
+1FFE4 text0 CODE >66:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FFF2 text0 CODE >68:C:\Users\hamza\ENCM_369\PIC_Activity5\Pic_activity_5.X\main.c
+1FF52 cinit CODE >5111:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF52 cinit CODE >5113:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF52 cinit CODE >5116:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF52 cinit CODE >5149:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF54 cinit CODE >5150:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF56 cinit CODE >5151:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF58 cinit CODE >5152:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF5A cinit CODE >5153:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF5C cinit CODE >5154:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF5E cinit CODE >5155:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF62 cinit CODE >5156:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF66 cinit CODE >5157:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF66 cinit CODE >5158:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF68 cinit CODE >5159:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF6C cinit CODE >5160:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF6E cinit CODE >5161:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF70 cinit CODE >5162:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF72 cinit CODE >5166:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF76 cinit CODE >5167:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF78 cinit CODE >5168:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF78 cinit CODE >5169:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF7A cinit CODE >5170:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF7C cinit CODE >5171:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF7E cinit CODE >5177:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF7E cinit CODE >5179:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
+1FF80 cinit CODE >5180:C:\Users\hamza\AppData\Local\Temp\s1ohk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -168,50 +185,55 @@ $dist/default/debug\Pic_activity_5.X.debug.o
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Pic_activity_5.X.debug.o
 __Hspace_0 20000 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-__Hspace_1 512 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
+__Hspace_1 519 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\Pic_activity_5.X.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_TimeXus 1FF38 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_TimeXus 1FF08 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\Pic_activity_5.X.debug.o
 _LATA 4BE 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 _PIR3 4B1 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-_main 1FFB4 0 CODE 0 text0 dist/default/debug\Pic_activity_5.X.debug.o
-start 1FFFC 0 CODE 0 init C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+___sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+_main 1FFBC 0 CODE 0 text0 dist/default/debug\Pic_activity_5.X.debug.o
+start 1FFFC 0 CODE 0 init C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 __size_of_main 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/debug\Pic_activity_5.X.debug.o
-__accesstop 560 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-intlevel0 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-intlevel1 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-intlevel2 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-intlevel3 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+__accesstop 560 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+intlevel0 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+intlevel1 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+intlevel2 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+intlevel3 0 0 CODE 0 text C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug\Pic_activity_5.X.debug.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/debug\Pic_activity_5.X.debug.o
-_UserAppRun 1FF72 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
+__pidataCOMRAM 1FEF0 0 CODE 0 idataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+_UserAppRun 1FF84 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
 _ANSELA 400 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Pic_activity_5.X.debug.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_UserAppInitialize 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_ClockSetup 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 _G_u32SystemFlags 501 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
-start_initialization 1FF38 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+start_initialization 1FF52 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_UserAppRun 1FF92 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_UserAppRun 1FFBC 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
 ___rparam_used 1 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-TimeXus@User_Input 50E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+_Counter 50D 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+TimeXus@User_Input 515 0 COMRAM 1 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 _T0CON0 31A 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 _T0CON1 31B 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-_TimeXus 1FF28 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
+_TimeXus 1FEF6 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/debug\Pic_activity_5.X.debug.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/debug\Pic_activity_5.X.debug.o
 __Hbank7 0 0 ABS 0 bank7 dist/default/debug\Pic_activity_5.X.debug.o
@@ -263,8 +285,8 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/debug\Pic_activity_5.X.debug.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/debug\Pic_activity_5.X.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Pic_activity_5.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\Pic_activity_5.X.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-_SystemSleep 1FF26 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+_SystemSleep 1FEEE 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug\Pic_activity_5.X.debug.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/debug\Pic_activity_5.X.debug.o
 __Lbank5 0 0 ABS 0 bank5 dist/default/debug\Pic_activity_5.X.debug.o
@@ -304,15 +326,16 @@ __Lrbit 0 0 COMRAM 1 rbit dist/default/debug\Pic_activity_5.X.debug.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/debug\Pic_activity_5.X.debug.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/debug\Pic_activity_5.X.debug.o
 __Ltext 0 0 ABS 0 text dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_UserAppInitialize 1FF72 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_UserAppInitialize 1FF30 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Hirdata 0 0 CODE 0 irdata dist/default/debug\Pic_activity_5.X.debug.o
 __S0 20000 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-__S1 512 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
+__S1 519 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __S2 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __S4 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __S5 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-_SysTickSetup 1FF92 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
+_SysTickSetup 1FF30 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Pic_activity_5.X.debug.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Pic_activity_5.X.debug.o
 __Hramtop 2600 0 RAM 0 ramtop dist/default/debug\Pic_activity_5.X.debug.o
@@ -320,7 +343,6 @@ __Hrparam 0 0 COMRAM 1 rparam dist/default/debug\Pic_activity_5.X.debug.o
 __activetblptr 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_SysTickSetup 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-UserAppRun@counter 50E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/debug\Pic_activity_5.X.debug.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/debug\Pic_activity_5.X.debug.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/debug\Pic_activity_5.X.debug.o
@@ -354,48 +376,50 @@ __Lbigram 0 0 ABS 0 bigram dist/default/debug\Pic_activity_5.X.debug.o
 __Lcomram 0 0 ABS 0 comram dist/default/debug\Pic_activity_5.X.debug.o
 __Lconfig 0 0 CONFIG 4 config dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_UserAppRun 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_SysTickSetup 1FFB4 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
-_UserAppInitialize 1FF5E 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_SysTickSetup 1FF52 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
+_UserAppInitialize 1FF1C 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\Pic_activity_5.X.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\Pic_activity_5.X.debug.o
-stackhi 25FF 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1qv4.o
-stacklo 560 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+stackhi 25FF 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1ohk.o
+stacklo 560 0 ABS 0 - C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\Pic_activity_5.X.debug.o
 __Lspace_0 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Lspace_1 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Lspace_2 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Lspace_4 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __pbssCOMRAM 501 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
-_G_u8UserAppFlags 50D 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+_G_u8UserAppFlags 50E 0 COMRAM 1 bssCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+_PIR3bits 4B1 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
-end_of_initialization 1FF44 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+end_of_initialization 1FF7E 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Pic_activity_5.X.debug.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\Pic_activity_5.X.debug.o
 __Lramtop 2600 0 RAM 0 ramtop dist/default/debug\Pic_activity_5.X.debug.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/debug\Pic_activity_5.X.debug.o
-__pcinit 1FF38 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
-__ptext0 1FFB4 0 CODE 0 text0 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext1 1FF72 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext2 1FF5E 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext3 1FF28 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext4 1FF26 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext5 1FF92 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext6 1FF4A 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
-__ptext7 1FF24 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
+__pcinit 1FF52 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+__ptext0 1FFBC 0 CODE 0 text0 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext1 1FF84 0 CODE 0 text1 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext2 1FF1C 0 CODE 0 text2 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext3 1FEF6 0 CODE 0 text3 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext4 1FEEE 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext5 1FF30 0 CODE 0 text5 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext6 1FF08 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
+__ptext7 1FEEC 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug\Pic_activity_5.X.debug.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\hamza\AppData\Local\Temp\s1qv4.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\hamza\AppData\Local\Temp\s1ohk.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/debug\Pic_activity_5.X.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Pic_activity_5.X.debug.o
-_ClockSetup 1FF24 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
+_ClockSetup 1FEEC 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_SystemSleep 1FF28 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_SystemSleep 1FEF0 0 CODE 0 text4 dist/default/debug\Pic_activity_5.X.debug.o
+_au8Pattern 50F 0 COMRAM 1 dataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 ___param_bank 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Pic_activity_5.X.debug.o
-__end_of__initialization 1FF44 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+__end_of__initialization 1FF7E 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_TimeXus 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/debug\Pic_activity_5.X.debug.o
-__pcstackCOMRAM 50E 0 COMRAM 1 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
+__pcstackCOMRAM 515 0 COMRAM 1 cstackCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __end_of_main 1FFFC 0 CODE 0 text0 dist/default/debug\Pic_activity_5.X.debug.o
 _PORTA 4CE 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 _TMR0H 319 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
@@ -409,14 +433,15 @@ __LRAM 1 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
 __Lbss 0 0 RAM 1 bss dist/default/debug\Pic_activity_5.X.debug.o
 __Lram 0 0 ABS 0 ram dist/default/debug\Pic_activity_5.X.debug.o
 __Lsfr 0 0 ABS 0 sfr dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_GpioSetup 1FF5E 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_GpioSetup 1FF1C 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
 __size_of_GpioSetup 0 0 ABS 0 - dist/default/debug\Pic_activity_5.X.debug.o
-__end_of_ClockSetup 1FF26 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
-__initialization 1FF38 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+__end_of_ClockSetup 1FEEE 0 CODE 0 text7 dist/default/debug\Pic_activity_5.X.debug.o
+__initialization 1FF52 0 CODE 0 cinit dist/default/debug\Pic_activity_5.X.debug.o
+__pdataCOMRAM 50F 0 COMRAM 1 dataCOMRAM dist/default/debug\Pic_activity_5.X.debug.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/debug\Pic_activity_5.X.debug.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\Pic_activity_5.X.debug.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/debug\Pic_activity_5.X.debug.o
-_GpioSetup 1FF4A 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
+_GpioSetup 1FF08 0 CODE 0 text6 dist/default/debug\Pic_activity_5.X.debug.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Pic_activity_5.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -442,18 +467,19 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Pic_activity_5.X.de
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 1FF38 1FF38 12 1
-text0 0 1FFB4 1FFB4 48 1
-text1 0 1FF72 1FF72 20 1
-text2 0 1FF5E 1FF5E 14 1
-text3 0 1FF28 1FF28 10 1
-text4 0 1FF26 1FF26 2 1
-text5 0 1FF92 1FF92 22 1
-text6 0 1FF4A 1FF4A 14 1
-text7 0 1FF24 1FF24 2 1
+cinit 0 1FF52 1FF52 32 1
+text0 0 1FFBC 1FFBC 40 1
+text1 0 1FF84 1FF84 38 1
+text2 0 1FF1C 1FF1C 14 1
+text3 0 1FEF6 1FEF6 12 1
+text4 0 1FEEE 1FEEE 2 1
+text5 0 1FF30 1FF30 22 1
+text6 0 1FF08 1FF08 14 1
+text7 0 1FEEC 1FEEC 2 1
+idataCOMRAM 0 1FEF0 1FEF0 6 1
 init 0 1FFFC 1FFFC 4 1
 reset_vec 0 0 0 4 1
-bssCOMRAM 1 501 501 11 1
+bssCOMRAM 1 501 501 18 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
