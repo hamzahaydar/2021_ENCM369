@@ -75,8 +75,11 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-
-
+    
+    T0CON0 = 0x90; // Enable TMR0, set as 16-bit timer, 1:1 postscaler
+    T0CON1 = 0x44; // set CLK source to Fosc/4 ,set to ASYNCH mode, set prescaler to 1:8
+    TMR0H = 0x00;   
+    TMR0L = 0x00;
 } /* end UserAppInitialize() */
 
   
@@ -92,27 +95,35 @@ Promises:
 - 
 
 */
-void UserAppRun(void)
-{
-    u32 u32Counter = 3000000000000000;
-
-    while(LATA<0xC0)
-    {    
-     LATA++;
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}    
-     for(int i=0; i<u32Counter;i++) {}
-     for(int i=0; i<u32Counter;i++) {}
+void UserAppRun()
+{    
+    u16 counter;
+    /*
+     for (u8 x = 0; x < 64; x++)
+    {
+        LATA &= 0x80; // Bitwise AND clears 6 LSBs
+        LATA |= x; // Bitwise OR 
+        
     }
-    
-    
-    LATA=0X80;
+     */
+    counter+=0x0001;
+    if(counter == 0x01F4){
+        counter = 0x0000;
+        LATA ^= 0x01;
+    }
  }
+void TimeXus(u16 User_Input){
     
+    T0CON0 &= 0X7F; // Disable timer 
+    
+    u16 timer_end = 0xFFFF - User_Input; // configure timer end to user specfication
+    
+    TMR0L = (u8) (timer_end & 0x0000); // Restart
+    TMR0H = (u8) ((timer_end >> 8)&0x0000);
+    
+    T0CON0 |= 0X80; // Re-enable Timer
+    
+}   
 
  /* end UserAppRun */
 

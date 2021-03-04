@@ -88,10 +88,11 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x00;
-    PORTA=0x00;    
-    LATA=0x80;   
-     
+    PORTA = 0x00; // Clear A ports
+    ANSELA = 0x00; // Enable digital output for A ports
+    TRISA = 0x00; // Set all A ports as OUTPUT
+    LATA = 0x80; // Set RA7 to HIGH, all other ports LOW
+    
 } /* end GpioSetup() */
 
 

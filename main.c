@@ -47,7 +47,6 @@ void main(void)
   UserAppInitialize();
   
   /* Exit initialization */
-    
   /* Super loop */  
   while(1)
   {
@@ -55,11 +54,18 @@ void main(void)
        
     /* Applications */
     UserAppRun();
-   
-     
+    
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
+    
+    TimeXus(0x03E8);
+    
+    while((PIR3 &0X80)!= 0X80)    
+    {  
+        PIR3 &= 0X00;
+    }
+      
     HEARTBEAT_ON();
     
   } /* end while(1) main super loop */
