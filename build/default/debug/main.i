@@ -27388,6 +27388,7 @@ void main(void)
 
     while((PIR3 &0X80)!= 0X80)
     {
+       PIR3bits.TMR0IF = 0x00;
     }
 
     (LATA |= 0X80);

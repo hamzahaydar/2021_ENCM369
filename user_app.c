@@ -98,23 +98,15 @@ Promises:
 */
 void UserAppRun()
 {    
-    /*
-     for (u8 x = 0; x < 64; x++)
+    if(PIR3bits.TMR0IF==1) // if Timer rolls over then light pattern
     {
-        LATA &= 0x80; // Bitwise AND clears 6 LSBs
-        LATA |= x; // Bitwise OR 
-        
+        LATA = au8Pattern[Counter];
+        Counter++;
     }
-     */
-   if(PIR3bits.TMR0IF==1)
-          {
-             LATA = au8Pattern[Counter];
-             Counter++;
-          }
-          if (Counter == 0x06)
-          {
-            Counter = 0x00;
-          }
+    if (Counter == 0x06)// if counter reaches end of sequence then reset counter
+    {
+        Counter = 0x00;
+    }
 }
    void TimeXus(u16 User_Input){
     

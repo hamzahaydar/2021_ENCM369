@@ -59,10 +59,11 @@ void main(void)
     HEARTBEAT_OFF();
     SystemSleep();
     
-    TimeXus(0x03E8);
+    TimeXus(0x03E8); // delay
     
-    while((PIR3 &0X80)!= 0X80)    
+    while((PIR3 &0X80)!= 0X80)  // check to see if timer rolled over  
     {  
+       PIR3bits.TMR0IF = 0x00;
     }
       
     HEARTBEAT_ON();
