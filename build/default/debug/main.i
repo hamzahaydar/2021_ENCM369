@@ -27381,16 +27381,17 @@ void main(void)
     UserAppRun();
 
 
-    (LATA &= 0X7F);
+                   ;
     SystemSleep();
 
-    TimeXus(0x03E8);
+    TimeXus(0x000A);
 
-    while(PIR3bits.TMR0IF!=1)
+    while(PIR3bits.TMR0IF !=1)
     {
+
     }
 
-    (LATA |= 0X80);
+                  ;
 
   }
 

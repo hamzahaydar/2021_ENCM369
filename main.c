@@ -54,19 +54,20 @@ void main(void)
        
     /* Applications */
     UserAppRun();
-    
+ 
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
     
-    TimeXus(0x03E8); // delay
+    TimeXus(0x000A); // delay of 10 microseconds
     
-    while(PIR3bits.TMR0IF!=1)  // check to see if timer rolled over  
+    while(PIR3bits.TMR0IF !=1)   
     {  
-    }
+        // waits here until delay is finished
+    }    
       
     HEARTBEAT_ON();
-    
+   
   } /* end while(1) main super loop */
   
 } /* end main() */

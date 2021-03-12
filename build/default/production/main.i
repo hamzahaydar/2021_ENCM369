@@ -27341,7 +27341,7 @@ void SystemSleep(void);
 # 1 "./user_app.h" 1
 # 27 "./user_app.h"
 void UserAppInitialize(void);
-void UserAppRun(u16 counter);
+void UserAppRun(void);
 void TimeXus(u16 User_Input);
 # 161 "./configuration.h" 2
 # 6 "main.c" 2
@@ -27373,27 +27373,27 @@ void main(void)
 
 
 
-  u16 counter = 0x0000;
   while(1)
   {
 
 
 
-    counter+=0x0001;
-    UserAppRun(counter);
+    UserAppRun();
 
 
-    (LATA &= 0X7F);
+                   ;
     SystemSleep();
 
-    TimeXus(0x03E8);
+    TimeXus(0x0004);
 
-    while((PIR3 &0X80)!= 0X80)
+    while(PIR3bits.TMR0IF !=1)
     {
-        PIR3 &= 0X00;
+
     }
 
-    (LATA |= 0X80);
+
+
+                  ;
 
   }
 

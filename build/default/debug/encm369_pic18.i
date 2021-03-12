@@ -27354,11 +27354,11 @@ void ClockSetup(void)
 # 89 "encm369_pic18.c"
 void GpioSetup(void)
 {
-    PORTA = 0x00;
     ANSELA = 0x00;
     TRISA = 0x00;
-    LATA = 0x80;
-
+    LATA = 0x04;
+    DAC1CON = 0xA0;
+    DAC1DATL = 0x00;
 }
 # 111 "encm369_pic18.c"
 void SysTickSetup(void)

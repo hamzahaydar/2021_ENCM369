@@ -27337,7 +27337,7 @@ void SystemSleep(void);
 # 1 "./user_app.h" 1
 # 27 "./user_app.h"
 void UserAppInitialize(void);
-void UserAppRun(u16 counter);
+void UserAppRun(void);
 void TimeXus(u16 User_Input);
 # 161 "./configuration.h" 2
 # 26 "user_app.c" 2
@@ -27349,14 +27349,15 @@ void TimeXus(u16 User_Input);
 
 
 volatile u8 G_u8UserAppFlags;
-
-
+static u8 Counter=0x00;
+u8 au8Pattern[] = {0x01,0x02,0x04,0x08,0x10,0x20};
+u8 time = 0x00;
 
 
 extern volatile u32 G_u32SystemTime1ms;
 extern volatile u32 G_u32SystemTime1s;
 extern volatile u32 G_u32SystemFlags;
-# 76 "user_app.c"
+# 77 "user_app.c"
 void UserAppInitialize(void)
 {
 
@@ -27365,24 +27366,40 @@ void UserAppInitialize(void)
     TMR0H = 0x00;
     TMR0L = 0x00;
 }
-# 98 "user_app.c"
-void UserAppRun(counter)
+# 99 "user_app.c"
+void UserAppRun()
 {
-# 108 "user_app.c"
-    if(counter == 0x01F4){
-        counter = 0x0000;
-        LATA = 0x01;
-    }
- }
-void TimeXus(u16 User_Input){
+        if(time == 0x00)
+        {
+           DAC1DATL += 0x01;
+        }
+        if(time == 0x01)
+        {
+            DAC1DATL -= 0x01;
+        }
+        if(DAC1DATL == 0xF0)
+        {
+            time = 0x01;
+        }
+        if(DAC1DATL == 0x00)
+        {
+            time = 0x00;
+        }
+
+}
+   void TimeXus(u16 User_Input)
+   {
 
     T0CON0 &= 0X7F;
 
     u16 timer_end = 0xFFFF - User_Input;
 
-    TMR0L = (u8) (timer_end & 0x0000);
-    TMR0H = (u8) ((timer_end >> 8)&0x0000);
+    TMR0L = (u8) (timer_end & 0xFF);
+    TMR0H = (u8) ((timer_end >> 8)&0xFF);
 
+    PIR3bits.TMR0IF = 0x00;
     T0CON0 |= 0X80;
 
-}
+
+
+   }

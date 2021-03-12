@@ -88,11 +88,11 @@ Promises:
 */
 void GpioSetup(void)
 {
-    PORTA = 0x00; // Clear A ports
     ANSELA = 0x00; // Enable digital output for A ports
     TRISA = 0x00; // Set all A ports as OUTPUT
-    LATA = 0x80; // Set RA7 to HIGH, all other ports LOW
-    
+    LATA = 0x04; // out put to RA2 only
+    DAC1CON = 0xA0; // Enable DAC to output to RA2 and sets Vref+ to 5v and Vref- to 0V
+    DAC1DATL = 0x00; // Start the output of the DAC at 0v and increment by one for 1.95mv steps
 } /* end GpioSetup() */
 
 
