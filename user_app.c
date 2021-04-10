@@ -238,7 +238,6 @@ Promises:
 void UserAppRun(void)
 {
     
-    
     static u16 UserApp_u16index = 0x0000; // Initialize a static index variable
     static u16 u16duration = 0x0000; // Initializes a static length counter variable
     
@@ -266,6 +265,7 @@ void UserAppRun(void)
     {
         UserApp_u16index = 0x0000; 
     }
+    
 } /* end UserAppRun() */
 
 
